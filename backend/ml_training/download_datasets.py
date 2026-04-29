@@ -1,10 +1,3 @@
-"""
-Dataset downloader for phishing detection.
-We use two public datasets:
-1. Email dataset - UCI Spam/Phishing emails
-2. URL dataset - PhishTank + legitimate URLs
-"""
-
 import pandas as pd
 import requests
 import os

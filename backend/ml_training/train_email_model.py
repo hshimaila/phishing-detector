@@ -1,23 +1,3 @@
-"""
-Email Phishing Classifier — Training Script
-
-Algorithm: Random Forest
-Why Random Forest?
-- Works great on small datasets (we don't need millions of samples)
-- Handles mixed features well (TF-IDF text + rule-based signals)
-- Gives us feature importance (we can see WHAT it learned)
-- Resistant to overfitting
-- Fast to train and predict
-
-Pipeline:
-Raw Email Text
-    → Clean Text (SpaCy)
-    → TF-IDF Vectorization (converts words to numbers)
-    → Combine with Phishing Signal Features
-    → Random Forest Classifier
-    → Prediction (0 = safe, 1 = phishing)
-"""
-
 import os
 import sys
 import pandas as pd

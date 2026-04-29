@@ -1,13 +1,3 @@
-"""
-PhishTank API
-
-Community-verified phishing URL database.
-Anyone can submit and verify phishing URLs.
-Very comprehensive for known phishing campaigns.
-
-Free API — just register at phishtank.com for a key.
-"""
-
 import requests
 import logging
 

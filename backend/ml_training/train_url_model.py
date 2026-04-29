@@ -1,13 +1,3 @@
-"""
-URL Phishing Classifier — Training Script
-
-This model works differently from the email model.
-Instead of text, it uses STRUCTURED FEATURES extracted from the URL.
-(We already built the feature extractor in url_parser.py)
-
-Algorithm: Random Forest (same as email model, works great for structured features)
-"""
-
 import os
 import sys
 import pandas as pd

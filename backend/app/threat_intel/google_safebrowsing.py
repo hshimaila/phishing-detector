@@ -1,13 +1,3 @@
-"""
-Google Safe Browsing API
-
-Checks if a URL is in Google's database of known phishing/malware sites.
-Updated constantly by Google's security team — very reliable.
-
-Docs: https://developers.google.com/safe-browsing/v4/lookup-api
-Free tier: 10,000 requests/day
-"""
-
 import requests
 import logging
 from flask import current_app
