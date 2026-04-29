@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: phishguard-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      # Persist the database and trained models outside the container
+      - ./backend/saved_models:/app/saved_models
+      - ./backend/phishing_detector.db:/app/phishing_detector.db
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-changeme-in-production}
+      - GOOGLE_SAFE_BROWSING_API_KEY=${GOOGLE_SAFE_BROWSING_API_KEY:-}
+      - PHISHTANK_API_KEY=${PHISHTANK_API_KEY:-}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    container_name: phishguard-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

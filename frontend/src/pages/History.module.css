@@ -1,0 +1,95 @@
+.page { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.subtitle { font-size: 12px; color: var(--text-secondary); }
+
+.refreshBtn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.refreshBtn:hover { color: var(--accent-cyan); border-color: rgba(0,229,255,0.3); }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+
+.statCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel { font-size: 9px; letter-spacing: 0.12em; color: var(--text-dim); }
+.statValue { font-family: var(--font-display); font-size: 24px; font-weight: 800; line-height: 1; }
+
+.filterBar { display: flex; align-items: center; gap: 4px; }
+
+.filterBtn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filterBtn:hover { color: var(--text-secondary); border-color: var(--border-mid); }
+
+.filterBtnActive {
+  color: var(--accent-cyan) !important;
+  border-color: rgba(0,229,255,0.3) !important;
+  background: rgba(0,229,255,0.06) !important;
+}
+
+.filterCount { margin-left: auto; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); }
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  padding: 2rem 0;
+}
+
+.loadingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  animation: pulse-glow 1s ease-in-out infinite;
+}

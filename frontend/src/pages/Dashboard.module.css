@@ -1,0 +1,82 @@
+.page { display: flex; flex-direction: column; gap: 0; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.subtitle { font-size: 12px; color: var(--text-secondary); max-width: 480px; line-height: 1.6; }
+
+.tip {
+  background: rgba(0, 229, 255, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  max-width: 280px;
+}
+
+.tipLabel { font-size: 9px; letter-spacing: 0.15em; color: var(--accent-cyan); opacity: 0.7; display: block; margin-bottom: 5px; }
+.tipText { font-size: 11px; color: var(--text-secondary); line-height: 1.5; }
+
+.analyzing {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 1.25rem;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--accent-cyan);
+}
+
+.analyzingDots { display: flex; gap: 5px; }
+
+.analyzingDots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  animation: pulse-glow 1.2s ease-in-out infinite;
+}
+
+.analyzingDots span:nth-child(2) { animation-delay: 0.2s; }
+.analyzingDots span:nth-child(3) { animation-delay: 0.4s; }
+
+.howItWorks { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-dim); }
+.howTitle { font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); margin-bottom: 1.25rem; }
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+
+.step {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: border-color 0.15s;
+}
+
+.step:hover { border-color: var(--border-mid); }
+
+.stepNum {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--border-mid);
+  margin-bottom: 8px;
+}
+
+.stepLabel { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent-cyan); margin-bottom: 6px; }
+.stepDesc { font-size: 11px; color: var(--text-dim); line-height: 1.6; }

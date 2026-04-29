@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+*.db
+
+# Environment variables — NEVER commit these
+.env
+backend/.env
+
+# Trained models — too large for GitHub
+backend/saved_models/*.pkl
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
